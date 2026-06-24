@@ -164,15 +164,15 @@ class JupyterBackup:
                     for output in cell.get("outputs", []):
                         out_type = output.get("output_type")
                         if out_type == "stream":
-                            print(f"\n[Output - Stream]:")
+                            print("\n[Output - Stream]:")
                             print("".join(output.get("text", [])))
                         elif out_type in ["execute_result", "display_data"]:
                             data = output.get("data", {})
                             if "text/plain" in data:
-                                print(f"\n[Output - Result]:")
+                                print("\n[Output - Result]:")
                                 print("".join(data["text/plain"]))
                         elif out_type == "error":
-                            print(f"\n[Output - ERROR]:")
+                            print("\n[Output - ERROR]:")
                             print("\n".join(output.get("traceback", [])))
         except json.JSONDecodeError:
             print("❌ Error parsing notebook file: Stored file contents are not valid JSON.")
