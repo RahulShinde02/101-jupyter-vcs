@@ -36,7 +36,7 @@ class JupyterBackup:
             """)
             con.commit()
 
-    def backup(self, message="Quick_backup"):
+    def backup(self, message=" "):
         """Scans the directory and backs up matching files only if they have changed using md5 hashing."""
         created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -251,7 +251,7 @@ class JupyterBackup:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Jupyter Notebook Local Version Control"
+        description="Jupyter Notebook and text files Local Version Control"
     )
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
 
@@ -291,7 +291,7 @@ def main():
     if args.command in ["backup", "restore", "list", "view"]:
         app = JupyterBackup()
         if args.command == "backup":
-            app.backup(message=args.m if args.m else "Quick_backup")
+            app.backup(message=args.m if args.m else " ")
         elif args.command == "restore":
             app.restore(args.filename, args.timestamp)
         elif args.command == "list":

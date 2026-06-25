@@ -143,6 +143,9 @@ Scans your current directory and saves a snapshot of all tracked files.
 
 ```bash
 101 backup
+
+# Backup with a custom message
+101 backup -m "Your descriptive message here"
 ```
 
 * **Output:** Tells you exactly what was backed up and what was skipped due to no changes.
