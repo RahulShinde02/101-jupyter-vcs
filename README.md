@@ -42,10 +42,13 @@ This tool acts as an **intelligent, localized code archive**. Before I wipe out 
 ```text
 101-jupyter-vcs/
 │
-├── README.md                # My project documentation and architecture log
-└── 101-jupyter-vcs v2 sqlite/
-    ├── 101.exe              # Compiled executable for Windows (fast, Nuitka-built)
-    └── 101.py               # Core CLI engine and backup logic
+├── README.md            # My project documentation and architecture log
+├── 101.py               # Core CLI engine and backup logic
+├── 101.ico              # icon file for exe 
+├── uv.lock 
+└── pyproject.toml 
+
+
 ```
 
 ---
