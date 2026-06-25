@@ -1,3 +1,4 @@
 *.sqlite
 .venv
 101.exe
+dist

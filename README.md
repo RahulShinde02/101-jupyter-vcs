@@ -46,9 +46,7 @@ This tool acts as an **intelligent, localized code archive**. Before I wipe out 
 ├── 101.py               # Core CLI engine and backup logic
 ├── 101.ico              # icon file for exe 
 ├── uv.lock 
-└── pyproject.toml 
-
-
+└── pyproject.toml
 ```
 
 ---
