@@ -1,1 +1,3 @@
 *.sqlite
+.venv
+101.exe
